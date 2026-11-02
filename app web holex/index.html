@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HOLEX Watch Store — Cửa hàng đồng hồ cao cấp tại Đồng Nai. Chuyên cung cấp đồng hồ nam, nữ, đồng hồ đôi chính hãng. Timeless Precision, Modern Style." />
+  <meta name="keywords" content="đồng hồ, đồng hồ cao cấp, đồng hồ Đồng Nai, HOLEX, đồng hồ nam, đồng hồ nữ, đồng hồ đôi" />
+  <meta name="author" content="HOLEX Watch Store" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="HOLEX Watch Store – Đồng Hồ Cao Cấp" />
+  <meta property="og:description" content="Timeless Precision, Modern Style – Cửa hàng đồng hồ sang trọng tại Đồng Nai." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="vi_VN" />
+
+  <title>HOLEX Watch Store – Đồng Hồ Cao Cấp | Đồng Nai</title>
+
+  <!-- Favicon SVG inline -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23080808' stroke='%23D4AF62' stroke-width='1.5'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Georgia,serif' font-size='16' font-weight='bold' fill='%23D4AF62'%3EH%3C/text%3E%3C/svg%3E" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header id="main-header" role="banner">
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <a href="#hero" class="header-logo" aria-label="HOLEX Watch Store - Về trang chủ">
+      <div class="logo-svg-wrap">
+        <!-- Logo SVG cách điệu chữ H kết hợp vòng đồng hồ và hình kim cương -->
+        <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="22" cy="22" r="20" stroke="#D4AF62" stroke-width="1.2" />
+          <circle cx="22" cy="22" r="16" stroke="#D4AF62" stroke-width="0.5" opacity="0.4" />
+          <!-- Chữ H cách điệu -->
+          <rect x="11" y="11" width="4" height="22" rx="0.5" fill="#D4AF62"/>
+          <rect x="29" y="11" width="4" height="22" rx="0.5" fill="#D4AF62"/>
+          <rect x="11" y="19.5" width="22" height="4" rx="0.5" fill="#D4AF62"/>
+          <!-- Kim cương nhỏ trên -->
+          <polygon points="22,6 24,10 22,13 20,10" fill="#D4AF62" opacity="0.7"/>
+          <!-- Kim cương nhỏ dưới -->
+          <polygon points="22,38 24,34 22,31 20,34" fill="#D4AF62" opacity="0.7"/>
+          <!-- Vạch giờ -->
+          <line x1="22" y1="2" x2="22" y2="5" stroke="#D4AF62" stroke-width="1.5" opacity="0.5"/>
+          <line x1="22" y1="39" x2="22" y2="42" stroke="#D4AF62" stroke-width="1.5" opacity="0.5"/>
+          <line x1="2" y1="22" x2="5" y2="22" stroke="#D4AF62" stroke-width="1.5" opacity="0.5"/>
+          <line x1="39" y1="22" x2="42" y2="22" stroke="#D4AF62" stroke-width="1.5" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="logo-text-wrap">
+        <span class="logo-brand-name">HOLEX</span>
+        <span class="logo-brand-sub">Watch Store</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav" role="navigation" aria-label="Menu chính">
+      <a href="#hero"         class="nav-link" data-section="hero">Trang Chủ</a>
+      <a href="#collection"   class="nav-link" data-section="collection">Bộ Sưu Tập</a>
+      <a href="#collection"   class="nav-link" onclick="document.querySelector('.filter-category-btn[data-category=\'classic\']')?.click()">Đồng Hồ Nam</a>
+      <a href="#collection"   class="nav-link" onclick="document.querySelector('.filter-category-btn[data-category=\'sport\']')?.click()">Đồng Hồ Nữ</a>
+      <a href="#collection"   class="nav-link" onclick="document.querySelector('.filter-category-btn[data-category=\'couple\']')?.click()">Đồng Hồ Đôi</a>
+      <a href="#brand"        class="nav-link" data-section="brand">Giới Thiệu</a>
+      <a href="#order"        class="nav-link" data-section="order">Liên Hệ</a>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <!-- Search Toggle -->
+      <button class="header-icon-btn" id="search-toggle" aria-label="Tìm kiếm">
+        <i class="fas fa-search"></i>
+      </button>
+
+      <!-- Cart -->
+      <button class="header-icon-btn" id="cart-btn" aria-label="Giỏ hàng">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge" id="cart-badge" aria-label="Số sản phẩm trong giỏ">0</span>
+      </button>
+
+      <!-- Order CTA -->
+      <a href="#order" class="btn-gold btn-order-header">Đặt Hàng Ngay</a>
+
+      <!-- Hamburger (Mobile) -->
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Mở menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Header Search Bar (dropdown) -->
+  <div class="header-search-bar" id="header-search-bar" role="search">
+    <input
+      type="search"
+      id="header-search-input"
+      placeholder="Tìm kiếm đồng hồ HOLEX..."
+      aria-label="Tìm kiếm sản phẩm"
+    />
+  </div>
+</header>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="Menu di động">
+  <a href="#hero"       class="nav-link">Trang Chủ</a>
+  <a href="#collection" class="nav-link">Bộ Sưu Tập</a>
+  <a href="#collection" class="nav-link">Đồng Hồ Nam</a>
+  <a href="#collection" class="nav-link">Đồng Hồ Nữ</a>
+  <a href="#collection" class="nav-link">Đồng Hồ Đôi</a>
+  <a href="#brand"      class="nav-link">Giới Thiệu</a>
+  <a href="#services"   class="nav-link">Dịch Vụ</a>
+  <a href="#order"      class="nav-link">Liên Hệ</a>
+  <a href="#order" class="btn-gold">Đặt Hàng Ngay <i class="fas fa-arrow-right"></i></a>
+</nav>
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<section id="hero" role="main">
+  <div class="hero-bg">
+    <div class="hero-line-v"></div>
+    <div class="hero-line-v"></div>
+  </div>
+
+  <div class="hero-inner container">
+    <!-- Left: Content -->
+    <div class="hero-content">
+      <div class="hero-badge" aria-label="Thương hiệu đồng hồ cao cấp">
+        Đồng Hồ Cao Cấp
+      </div>
+
+      <h1 class="hero-title">
+        <span class="gold-accent">HOLEX</span><br />
+        WATCH STORE
+      </h1>
+
+      <p class="hero-subtitle">"Vẻ Đẹp Vượt Thời Gian"</p>
+
+      <div class="hero-tagline-wrap">
+        <p id="hero-tagline" aria-live="polite"></p>
+      </div>
+
+      <blockquote class="hero-desc">
+        "Mỗi chiếc đồng hồ không chỉ đo đếm thời gian, mà còn là tuyên ngôn về phong cách, cá tính và giá trị của người sở hữu."
+      </blockquote>
+
+      <div class="hero-cta">
+        <a href="#collection" class="btn-gold">
+          <i class="fas fa-gem"></i> Khám Phá Bộ Sưu Tập
+        </a>
+        <a href="#order" class="btn-outline-gold">
+          <i class="fas fa-bolt"></i> Đặt Hàng Ngay
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats" aria-label="Thống kê thương hiệu">
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="500" aria-label="Hơn 500 sản phẩm">0</div>
+          <div class="hero-stat-label">Sản phẩm</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="2000" aria-label="Hơn 2000 khách hàng">0</div>
+          <div class="hero-stat-label">Khách hàng</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="5" aria-label="5 năm kinh nghiệm">0</div>
+          <div class="hero-stat-label">Năm kinh nghiệm</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="hero-image-col" aria-hidden="true">
+      <div class="hero-img-frame">
+        <img
+          src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800&q=85"
+          alt="Đồng hồ HOLEX cao cấp trên nền đen sang trọng"
+          class="hero-img-main"
+          width="520"
+          height="650"
+          loading="eager"
+        />
+        <div class="hero-img-badge">
+          <div class="badge-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <div class="badge-text">
+            <strong>Chất Lượng Đảm Bảo</strong>
+            <span>Bảo hành chính hãng</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span>Cuộn xuống</span>
+  </div>
+</section>
+
+<!-- ============================================================
+     BRAND STORY SECTION
+     ============================================================ -->
+<section id="brand" aria-labelledby="brand-title">
+  <div class="container section-padding">
+    <div class="brand-inner">
+
+      <!-- Image column -->
+      <div class="brand-img-col reveal">
+        <div class="brand-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=700&q=80"
+            alt="Nghệ thuật chế tác đồng hồ HOLEX - The Art of Time"
+            loading="lazy"
+          />
+        </div>
+        <div class="brand-img-accent" aria-hidden="true"></div>
+        <div class="brand-img-accent-2" aria-hidden="true"></div>
+      </div>
+
+      <!-- Content column -->
+      <div class="brand-content reveal reveal-delay-2">
+        <span class="section-tag">Câu Chuyện Thương Hiệu</span>
+        <h2 class="section-title" id="brand-title">THE ART OF TIME</h2>
+        <div class="gold-line" aria-hidden="true"></div>
+
+        <blockquote class="brand-quote">
+          "Không đơn thuần là công cụ đo thời gian, đồng hồ là nghệ thuật — một tuyên ngôn sống."
+        </blockquote>
+
+        <p class="brand-text">
+          <strong style="color:var(--ivory)">HOLEX</strong> tin rằng đồng hồ không đơn thuần là một công cụ xem giờ mà còn là biểu tượng của phong cách sống, sự tinh tế và cá tính riêng của mỗi người.
+        </p>
+        <p class="brand-text">
+          Với định hướng kết hợp giữa vẻ đẹp cổ điển và tinh thần hiện đại, HOLEX mang đến những thiết kế phù hợp với nhiều phong cách và khoảnh khắc trong cuộc sống — từ văn phòng lịch lãm đến những chuyến phiêu lưu ngoài trời.
+        </p>
+
+        <!-- Brand values -->
+        <div class="brand-values">
+          <div class="brand-value">
+            <div class="brand-value-icon"><i class="fas fa-medal" aria-hidden="true"></i></div>
+            <div class="brand-value-text">
+              <strong>Chất Lượng</strong>
+              <span>Kiểm định nghiêm ngặt từng sản phẩm</span>
+            </div>
+          </div>
+          <div class="brand-value">
+            <div class="brand-value-icon"><i class="fas fa-gem" aria-hidden="true"></i></div>
+            <div class="brand-value-text">
+              <strong>Tinh Tế</strong>
+              <span>Thiết kế tỉ mỉ đến từng chi tiết</span>
+            </div>
+          </div>
+          <div class="brand-value">
+            <div class="brand-value-icon"><i class="fas fa-infinity" aria-hidden="true"></i></div>
+            <div class="brand-value-text">
+              <strong>Bền Vững</strong>
+              <span>Vật liệu cao cấp vượt thời gian</span>
+            </div>
+          </div>
+          <div class="brand-value">
+            <div class="brand-value-icon"><i class="fas fa-heart" aria-hidden="true"></i></div>
+            <div class="brand-value-text">
+              <strong>Tận Tâm</strong>
+              <span>Phục vụ khách hàng hết lòng</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     COLLECTION / PRODUCTS SECTION
+     ============================================================ -->
+<section id="collection" aria-labelledby="collection-title">
+  <div class="container section-padding">
+
+    <!-- Section header -->
+    <div class="collection-header reveal">
+      <span class="section-tag">Bộ Sưu Tập</span>
+      <h2 class="section-title" id="collection-title">ĐỒNG HỒ HOLEX</h2>
+      <div class="gold-line-center" aria-hidden="true"></div>
+      <p class="section-subtitle" style="margin:0 auto">
+        Khám phá bộ sưu tập đồng hồ cao cấp với ba dòng sản phẩm đặc trưng, mỗi chiếc là một tác phẩm nghệ thuật tinh tế.
+      </p>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar reveal" role="search" aria-label="Bộ lọc sản phẩm">
+
+      <!-- Category pills -->
+      <div class="filter-group">
+        <span class="filter-label">Danh mục</span>
+        <div class="filter-category-pills" role="group" aria-label="Chọn danh mục">
+          <button class="filter-category-btn active" data-category="all" aria-pressed="true">Tất Cả</button>
+          <button class="filter-category-btn" data-category="classic" aria-pressed="false">Classic</button>
+          <button class="filter-category-btn" data-category="sport"   aria-pressed="false">Sport &amp; Urban</button>
+          <button class="filter-category-btn" data-category="couple"  aria-pressed="false">Couple</button>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <div class="filter-group" style="flex:1;min-width:200px">
+        <label class="filter-label" for="search-input">Tìm kiếm</label>
+        <div class="filter-search-wrap">
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <input
+            type="search"
+            id="search-input"
+            class="filter-search-input"
+            placeholder="Tên sản phẩm, mã SP..."
+            aria-label="Tìm kiếm sản phẩm"
+          />
+        </div>
+      </div>
+
+      <!-- Price range -->
+      <div class="filter-group">
+        <span class="filter-label">Khoảng giá (VNĐ)</span>
+        <div class="filter-price-wrap">
+          <input
+            type="number"
+            id="min-price"
+            class="filter-price-input"
+            placeholder="Từ"
+            min="0"
+            aria-label="Giá tối thiểu"
+          />
+          <span style="color:var(--silver)">—</span>
+          <input
+            type="number"
+            id="max-price"
+            class="filter-price-input"
+            placeholder="Đến"
+            min="0"
+            aria-label="Giá tối đa"
+          />
+        </div>
+      </div>
+
+      <!-- Sort -->
+      <div class="filter-group">
+        <label class="filter-label" for="sort-select">Sắp xếp</label>
+        <select id="sort-select" class="filter-sort-select" aria-label="Sắp xếp sản phẩm">
+          <option value="default">Mặc định</option>
+          <option value="price-asc">Giá: Thấp → Cao</option>
+          <option value="price-desc">Giá: Cao → Thấp</option>
+          <option value="name-asc">Tên A → Z</option>
+        </select>
+      </div>
+
+      <!-- Clear btn -->
+      <button id="clear-filters-btn" class="btn-clear-filters" aria-label="Xóa bộ lọc">
+        <i class="fas fa-times" aria-hidden="true"></i> Xóa lọc
+      </button>
+    </div>
+
+    <!-- Products count -->
+    <div class="products-count-bar">
+      <p class="products-count">Hiển thị <span id="products-count">0 sản phẩm</span></p>
+    </div>
+
+    <!-- Products Grid -->
+    <div id="products-grid" role="list" aria-label="Danh sách sản phẩm">
+      <!-- Được render bởi JavaScript -->
+    </div>
+
+    <!-- No results -->
+    <div id="no-results" role="status" aria-live="polite">
+      <i class="fas fa-search" aria-hidden="true"></i>
+      <p>Không tìm thấy sản phẩm phù hợp.</p>
+      <button class="btn-outline-gold" onclick="document.getElementById('clear-filters-btn').click()">
+        Xem tất cả sản phẩm
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES SECTION
+     ============================================================ -->
+<section id="services" aria-labelledby="services-title">
+  <div class="container section-padding">
+    <div class="services-header reveal">
+      <span class="section-tag">Dịch Vụ</span>
+      <h2 class="section-title" id="services-title">DỊCH VỤ HOLEX</h2>
+      <div class="gold-line-center" aria-hidden="true"></div>
+      <p class="section-subtitle" style="margin:0 auto">
+        Trải nghiệm dịch vụ đồng hồ cao cấp trọn vẹn từ HOLEX — không chỉ là mua hàng, mà là một hành trình phong cách.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <div class="service-icon" aria-hidden="true">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3 class="service-title">Bảo Hành Chính Hãng</h3>
+        <p class="service-desc">Bảo hành từ 12 đến 24 tháng tùy dòng sản phẩm. Sửa chữa miễn phí lỗi từ nhà sản xuất.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon" aria-hidden="true">
+          <i class="fas fa-comments"></i>
+        </div>
+        <h3 class="service-title">Tư Vấn Chọn Đồng Hồ</h3>
+        <p class="service-desc">Đội ngũ tư vấn chuyên nghiệp hỗ trợ bạn lựa chọn chiếc đồng hồ phù hợp nhất với phong cách và ngân sách.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon" aria-hidden="true">
+          <i class="fas fa-pen-nib"></i>
+        </div>
+        <h3 class="service-title">Khắc Tên &amp; Kỷ Niệm</h3>
+        <p class="service-desc">Dịch vụ khắc laser tên, ngày kỷ niệm hoặc thông điệp cá nhân lên mặt sau đồng hồ. Miễn phí cho dòng Couple.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon" aria-hidden="true">
+          <i class="fas fa-gift"></i>
+        </div>
+        <h3 class="service-title">Đóng Gói Quà Tặng</h3>
+        <p class="service-desc">Hộp quà cao cấp nền nhung đen, ribbon vàng sang trọng. Phù hợp tặng sinh nhật, kỷ niệm, Tết và các dịp đặc biệt.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-4">
+        <div class="service-icon" aria-hidden="true">
+          <i class="fas fa-headset"></i>
+        </div>
+        <h3 class="service-title">Hỗ Trợ Sau Mua Hàng</h3>
+        <p class="service-desc">Hotline hỗ trợ 06:00 – 22:00 hàng ngày. Giải đáp mọi thắc mắc về sản phẩm, vận chuyển và bảo hành.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS SECTION
+     ============================================================ -->
+<section id="testimonials" aria-labelledby="testimonials-title">
+  <div class="container section-padding">
+    <div class="testimonials-header reveal">
+      <span class="section-tag">Đánh Giá Khách Hàng</span>
+      <h2 class="section-title" id="testimonials-title">KHÁCH HÀNG NÓI GÌ</h2>
+      <div class="gold-line-center" aria-hidden="true"></div>
+    </div>
+
+    <div class="testimonials-grid">
+
+      <article class="testimonial-card reveal">
+        <div class="testimonial-quote-icon" aria-hidden="true">
+          <i class="fas fa-quote-left"></i>
+        </div>
+        <div class="testimonial-stars" aria-label="5 sao">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">
+          "Tôi mua chiếc HOLEX Classic Noir làm quà sinh nhật cho chồng. Anh ấy thích lắm! Đồng hồ rất đẹp, đóng gói sang trọng và giao hàng nhanh. Sẽ quay lại mua thêm cho dòng Couple."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">
+            <i class="fas fa-user"></i>
+          </div>
+          <div>
+            <p class="author-name">Chị Nguyễn Thị Lan</p>
+            <p class="author-info">Khách hàng tại Biên Hòa, Đồng Nai</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-quote-icon" aria-hidden="true">
+          <i class="fas fa-quote-left"></i>
+        </div>
+        <div class="testimonial-stars" aria-label="5 sao">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">
+          "HOLEX Sport Titan là chiếc đồng hồ tốt nhất trong tầm giá tôi đã mua. Chống nước 10ATM thật sự hiệu quả, tôi mang đi bơi hàng ngày không có vấn đề gì. Thiết kế rất nam tính và chắc chắn."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">
+            <i class="fas fa-user"></i>
+          </div>
+          <div>
+            <p class="author-name">Anh Trần Văn Minh</p>
+            <p class="author-info">Khách hàng tại Long Thành, Đồng Nai</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-quote-icon" aria-hidden="true">
+          <i class="fas fa-quote-left"></i>
+        </div>
+        <div class="testimonial-stars" aria-label="5 sao">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">
+          "Mua bộ Couple Moonlight tặng vợ nhân ngày kỷ niệm. Được khắc tên miễn phí, hộp quà rất đẹp. Shop tư vấn nhiệt tình, đúng như mô tả. Cảm ơn HOLEX rất nhiều!"
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">
+            <i class="fas fa-user"></i>
+          </div>
+          <div>
+            <p class="author-name">Anh Lê Quốc Hùng</p>
+            <p class="author-info">Khách hàng tại Nhơn Trạch, Đồng Nai</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="testimonials-disclaimer">
+      * Nội dung trên là đánh giá minh họa, không phải phản hồi của khách hàng thực tế.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     ORDER FORM SECTION
+     ============================================================ -->
+<section id="order" aria-labelledby="order-title">
+  <div class="container section-padding">
+    <div class="order-inner">
+
+      <!-- Left info column -->
+      <div class="order-info-col reveal">
+        <span class="section-tag">Đặt Hàng</span>
+        <h2 class="section-title" id="order-title">LIÊN HỆ &amp; ĐẶT HÀNG</h2>
+        <div class="gold-line" aria-hidden="true"></div>
+        <p class="section-subtitle">
+          Điền thông tin đặt hàng, chúng tôi sẽ liên hệ xác nhận và tư vấn trong vòng 30 phút.
+        </p>
+
+        <div class="order-info-items">
+          <div class="order-info-item">
+            <div class="order-info-icon" aria-hidden="true">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="order-info-text">
+              <strong>Địa Chỉ Cửa Hàng</strong>
+              <span>Tổ 10, Ấp 2, Xã Long An,<br/>Huyện Nhơn Trạch, Tỉnh Đồng Nai</span>
+            </div>
+          </div>
+
+          <div class="order-info-item">
+            <div class="order-info-icon" aria-hidden="true">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="order-info-text">
+              <strong>Hotline</strong>
+              <span><a href="tel:09031702981" style="color:var(--gold)">0903 170 2981</a></span>
+            </div>
+          </div>
+
+          <div class="order-info-item">
+            <div class="order-info-icon" aria-hidden="true">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="order-info-text">
+              <strong>Giờ Mở Cửa</strong>
+              <span>06:00 – 22:00 hằng ngày</span>
+            </div>
+          </div>
+
+          <div class="order-info-item">
+            <div class="order-info-icon" aria-hidden="true">
+              <i class="fas fa-truck"></i>
+            </div>
+            <div class="order-info-text">
+              <strong>Giao Hàng Toàn Quốc</strong>
+              <span>Giao hàng nhanh qua GHTK, GHN<br/>Miễn phí ship trong nội thành Đồng Nai</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="order-form-col reveal reveal-delay-2">
+        <h3 class="form-title">THÔNG TIN ĐẶT HÀNG</h3>
+        <p class="form-subtitle">Vui lòng điền đầy đủ thông tin bên dưới. Chúng tôi sẽ liên hệ trong 30 phút.</p>
+
+        <form id="order-form" novalidate aria-label="Form đặt hàng">
+          <div class="form-grid">
+
+            <!-- Họ tên -->
+            <div class="form-group">
+              <label class="form-label" for="order-name">
+                Họ và tên <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="text"
+                id="order-name"
+                name="name"
+                class="form-input"
+                placeholder="Nguyễn Văn A"
+                required
+                autocomplete="name"
+                aria-required="true"
+              />
+              <span class="form-error" data-error="order-name" role="alert"></span>
+            </div>
+
+            <!-- Số điện thoại -->
+            <div class="form-group">
+              <label class="form-label" for="order-phone">
+                Số điện thoại <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="tel"
+                id="order-phone"
+                name="phone"
+                class="form-input"
+                placeholder="0912 345 678"
+                required
+                autocomplete="tel"
+                aria-required="true"
+              />
+              <span class="form-error" data-error="order-phone" role="alert"></span>
+            </div>
+
+            <!-- Địa chỉ -->
+            <div class="form-group full">
+              <label class="form-label" for="order-address">
+                Địa chỉ nhận hàng <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="text"
+                id="order-address"
+                name="address"
+                class="form-input"
+                placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố"
+                required
+                autocomplete="street-address"
+                aria-required="true"
+              />
+              <span class="form-error" data-error="order-address" role="alert"></span>
+            </div>
+
+            <!-- Thời gian giao -->
+            <div class="form-group">
+              <label class="form-label" for="order-time">Thời gian mong muốn nhận hàng</label>
+              <input
+                type="datetime-local"
+                id="order-time"
+                name="deliveryTime"
+                class="form-input"
+                aria-label="Thời gian giao hàng"
+              />
+            </div>
+
+            <!-- Sản phẩm -->
+            <div class="form-group">
+              <label class="form-label" for="order-product">
+                Sản phẩm <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <select
+                id="order-product"
+                name="product"
+                class="form-select"
+                required
+                aria-required="true"
+              >
+                <option value="">— Chọn sản phẩm —</option>
+              </select>
+              <span class="form-error" data-error="order-product" role="alert"></span>
+            </div>
+
+            <!-- Số lượng -->
+            <div class="form-group">
+              <label class="form-label" for="order-qty">Số lượng</label>
+              <input
+                type="number"
+                id="order-qty"
+                name="qty"
+                class="form-input"
+                value="1"
+                min="1"
+                max="99"
+                aria-label="Số lượng sản phẩm"
+              />
+            </div>
+
+            <!-- Ghi chú -->
+            <div class="form-group full">
+              <label class="form-label" for="order-note">Ghi chú (tùy chọn)</label>
+              <textarea
+                id="order-note"
+                name="note"
+                class="form-textarea"
+                placeholder="Yêu cầu khắc tên, màu dây, hộp quà, thời gian giao hàng cụ thể..."
+                aria-label="Ghi chú đơn hàng"
+              ></textarea>
+            </div>
+
+          </div><!-- /form-grid -->
+
+          <!-- Order Total -->
+          <div class="order-total-box" aria-live="polite">
+            <span class="order-total-label">Tổng Tiền Dự Kiến</span>
+            <span id="order-total-display">—</span>
+          </div>
+
+          <button type="submit" class="btn-submit-order">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            XÁC NHẬN ĐẶT HÀNG
+          </button>
+
+          <p style="font-size:11px;color:var(--silver);margin-top:16px;text-align:center;opacity:0.6;">
+            * Đây là phiên bản demo frontend. Thông tin đơn hàng sẽ được hiển thị trong Console để kiểm thử.
+          </p>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer id="main-footer" role="contentinfo">
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand column -->
+        <div class="footer-brand-col">
+          <div class="footer-logo">
+            <div class="footer-logo-svg-wrap" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="22" cy="22" r="20" stroke="#D4AF62" stroke-width="1.2" />
+                <circle cx="22" cy="22" r="16" stroke="#D4AF62" stroke-width="0.5" opacity="0.4" />
+                <rect x="11" y="11" width="4" height="22" rx="0.5" fill="#D4AF62"/>
+                <rect x="29" y="11" width="4" height="22" rx="0.5" fill="#D4AF62"/>
+                <rect x="11" y="19.5" width="22" height="4" rx="0.5" fill="#D4AF62"/>
+                <polygon points="22,6 24,10 22,13 20,10" fill="#D4AF62" opacity="0.7"/>
+                <polygon points="22,38 24,34 22,31 20,34" fill="#D4AF62" opacity="0.7"/>
+              </svg>
+            </div>
+            <div>
+              <div class="footer-brand-name">HOLEX</div>
+            </div>
+          </div>
+          <p class="footer-tagline">Timeless Precision, Modern Style</p>
+          <p class="footer-about">
+            HOLEX Watch Store — Cửa hàng đồng hồ cao cấp tại Đồng Nai, Việt Nam.
+            Chuyên cung cấp đồng hồ nam, nữ và đồng hồ đôi với phong cách sang trọng, tinh tế và bền vững theo thời gian.
+          </p>
+          <div class="footer-socials">
+            <a href="https://facebook.com/holexwatchstore" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook HOLEX">
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a href="https://instagram.com/holexwatchstore" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram HOLEX">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://zalo.me/0903170298" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Zalo HOLEX">
+              <span style="font-size:11px;font-weight:700;letter-spacing:0">Za</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links column -->
+        <div>
+          <h4 class="footer-col-title">Khám Phá</h4>
+          <nav class="footer-links" aria-label="Links trang">
+            <a href="#brand"      class="footer-link">Giới thiệu HOLEX</a>
+            <a href="#collection" class="footer-link">Bộ sưu tập</a>
+            <a href="#services"   class="footer-link">Dịch vụ</a>
+            <a href="#order"      class="footer-link">Liên hệ</a>
+          </nav>
+        </div>
+
+        <!-- Policy column -->
+        <div>
+          <h4 class="footer-col-title">Chính Sách</h4>
+          <nav class="footer-links" aria-label="Chính sách">
+            <a href="#" class="footer-link">Chính sách bảo hành</a>
+            <a href="#" class="footer-link">Chính sách đổi trả</a>
+            <a href="#" class="footer-link">Chính sách vận chuyển</a>
+            <a href="#" class="footer-link">Bảo mật thông tin</a>
+          </nav>
+        </div>
+
+        <!-- Contact column -->
+        <div>
+          <h4 class="footer-col-title">Liên Hệ</h4>
+          <address class="footer-contact-items" style="font-style:normal">
+            <div class="footer-contact-item">
+              <div class="contact-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-text">
+                <strong>Địa chỉ</strong>
+                Tổ 10, Ấp 2, Xã Long An,<br/>
+                Huyện Nhơn Trạch, Tỉnh Đồng Nai
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="contact-icon" aria-hidden="true"><i class="fas fa-phone-alt"></i></div>
+              <div class="contact-text">
+                <strong>Hotline</strong>
+                <a href="tel:09031702981" style="color:var(--gold)">0903 170 2981</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="contact-icon" aria-hidden="true"><i class="fas fa-clock"></i></div>
+              <div class="contact-text">
+                <strong>Giờ mở cửa</strong>
+                06:00 – 22:00 hằng ngày
+              </div>
+            </div>
+          </address>
+        </div>
+
+      </div><!-- /footer-grid -->
+    </div><!-- /container -->
+  </div><!-- /footer-main -->
+
+  <!-- Divider -->
+  <div class="footer-divider" aria-hidden="true"></div>
+
+  <!-- Footer bottom -->
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-copyright">
+        © 2024 <a href="#hero">HOLEX Watch Store</a>. Bảo lưu mọi quyền.
+      </p>
+      <p class="footer-copyright">
+        Hình ảnh từ <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> (miễn phí, hợp pháp).
+      </p>
+    </div>
+  </div>
+
+  <!-- Credit bar -->
+  <div class="footer-credit-bar">
+    <p>Thiết kế bởi <strong>Từ Dương Huy</strong></p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     OVERLAYS & MODALS
+     ============================================================ -->
+
+<!-- Product Detail Modal -->
+<div
+  id="product-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="product-modal-title"
+  tabindex="-1"
+>
+  <div class="modal-box">
+    <button id="product-modal-close" class="modal-close-btn" aria-label="Đóng chi tiết sản phẩm">
+      <i class="fas fa-times" aria-hidden="true"></i>
+    </button>
+    <div id="product-modal-body">
+      <!-- Được render bởi JavaScript -->
+    </div>
+  </div>
+</div>
+
+<!-- Cart Sidebar -->
+<aside
+  id="cart-sidebar"
+  role="complementary"
+  aria-label="Giỏ hàng"
+>
+  <div class="cart-header">
+    <h2 class="cart-title">GIỎ HÀNG</h2>
+    <button id="cart-close" class="cart-close-btn" aria-label="Đóng giỏ hàng">
+      <i class="fas fa-times" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <!-- Empty state -->
+  <div id="cart-empty" role="status" aria-live="polite">
+    <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+    <p>Giỏ hàng đang trống</p>
+    <a href="#collection" class="btn-outline-gold" style="font-size:11px;padding:10px 20px" onclick="closeCart()">
+      Khám phá sản phẩm
+    </a>
+  </div>
+
+  <!-- Items list -->
+  <div id="cart-items-list" aria-label="Danh sách sản phẩm trong giỏ" aria-live="polite">
+    <!-- Được render bởi JavaScript -->
+  </div>
+
+  <!-- Footer -->
+  <div id="cart-footer">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Tổng Cộng</span>
+      <span class="cart-total-amount" id="cart-total-price" aria-live="polite">0 ₫</span>
+    </div>
+    <button id="checkout-btn" class="btn-gold btn-checkout btn-full">
+      <i class="fas fa-paper-plane" aria-hidden="true"></i>
+      TIẾN HÀNH ĐẶT HÀNG
+    </button>
+  </div>
+</aside>
+
+<!-- Cart overlay -->
+<div id="cart-overlay" aria-hidden="true"></div>
+
+<!-- Order Success Overlay -->
+<div
+  id="order-success-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="success-dialog-title"
+>
+  <div class="success-box">
+    <div class="success-icon" aria-hidden="true">
+      <i class="fas fa-check"></i>
+    </div>
+    <h2 class="success-title" id="success-dialog-title">Đặt Hàng Thành Công!</h2>
+    <p class="success-message">
+      Cảm ơn <strong id="success-customer-name">Quý Khách</strong> đã tin tưởng HOLEX!
+    </p>
+    <p class="success-detail">Chúng tôi sẽ liên hệ xác nhận đơn hàng trong vòng 30 phút.</p>
+    <span class="success-total" id="success-total" aria-label="Tổng tiền đơn hàng">—</span>
+    <p style="font-size:14px;color:var(--silver);margin-bottom:32px;">
+      "Đơn hàng đã được gửi thành công!<br/>HOLEX xin cảm ơn quý khách." 🎉
+    </p>
+    <button id="success-close" class="btn-gold">
+      <i class="fas fa-home" aria-hidden="true"></i> VỀ TRANG CHỦ
+    </button>
+  </div>
+</div>
+
+<!-- Toast Container -->
+<div id="toast-container" role="region" aria-label="Thông báo" aria-live="polite"></div>
+
+<!-- Back to top -->
+<button id="back-to-top" aria-label="Quay lên đầu trang">
+  <i class="fas fa-chevron-up" aria-hidden="true"></i>
+</button>
+
+<!-- ============================================================
+     SCRIPTS (thứ tự quan trọng!)
+     ============================================================ -->
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
